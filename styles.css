@@ -1,7 +1,164 @@
-.menu {
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary: #fff1cd;
+    --secondary: #84714F;
+    --accent1: #b6201e;
+    --accent2: #CF8BA3;
+}
+
+
+body {
+    font-family: 'Open Sans', sans-serif;   
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Ma Shan Zheng', cursive;   
+}
+
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3rem;
+    background-color: var(--primary);
+    border-bottom: 4px solid var(--accent1);
+    position: relative;
+}
+
+.dragon {
+    width: 50px;
+    height: auto;
+}
+
+.dragon-right {
+    transform: scaleX(-1);
+}
+
+
+.header-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.circle-logo {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 3px solid var(--accent1);
+    color: var(--accent1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.main-nav {
+    display: flex;
+    gap: 2rem;
+    font-family: 'Ma Shan Zheng', cursive;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #000;
+    padding: 0.6rem 1.5rem;
+    border: 2px solid var(--accent1);
+    font-size: 0.95rem;
+    background-color: white;
+}
+
+.main-nav a:hover {
+    background-color: var(--accent1);
+    color: white;
+}
+
+@media (max-width: 700px) {
+    .site-header {
+        flex-direction: column;
+        gap: 1rem;
+        height: auto;
+    }
+
+    .header-center {
+        position: static;
+        transform: none;
+        margin-top: 1rem;
+    }
+
+    .main {
+        padding: 3rem 0;
+        background-color: var(--primary);
+    }
+
+    .main-nav {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+}
+
+
+main {
+    padding: 3rem 0;
+    background-color: #f8f8f8;
+}
+
+#menu {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.menu-item {
+    background-color: white;
+    border: 2px solid var(--secondary);
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.menu-item h3 {
+    font-size: 1.1rem;
+    color: var(--accent1);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 3px solid var(--accent1);
+}
+
+.menu-item p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #333;
+}
+
+
+.site-footer {
+    padding: 2rem 3rem;
+    background-color: var(--secondary);
+    color: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
+
+.site-footer h4 {
+    color: var(--accent2);
+    margin-bottom: 0.3rem;
 }
