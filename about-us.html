@@ -15,13 +15,15 @@
             display: grid;
             grid-template-columns: 1fr .25fr .25fr 1fr;
             grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            align-items: center;
+            
         }
 
         main::before {
             content: "";
             position: absolute;
-            top: 0;
-            bottom: 0;
+            top: 8%;
+            bottom: 15.1%;
             left: 50%;
             width: 8px;
             background: black;
@@ -46,46 +48,166 @@
             top: 0;
         }
 
-        .circle {
-            position: absolute;
-            width: 25px;
-            height: 25px;
-            background: black;
-            border-radius: 50%;
-            top: 0;
-        }
-
         .line.left {
             right: calc(50% + 4px);
-        }
-
-        .circle.left {
-            position: absolute;
-            left: 880px;
-            top: 50%;
-            transform: translate(50%, -50%);
         }
 
         .line.right {
             left: calc(50% + 4px);
         }
 
-        .circle.right {
-            position: absolute;
-            left: 1370px;
-            top: 50%;
-            transform: translate(-50%, -50%);
+        .line:nth-of-type(1) { top: 8%; }
+        .line:nth-of-type(2) { top: 17.6%; }
+        .line:nth-of-type(3) { top: 27%; }
+        .line:nth-of-type(4) { top: 36.7%; }
+        .line:nth-of-type(5) { top: 46.5%; }
+        .line:nth-of-type(6) { top: 55.7%; }
+        .line:nth-of-type(7) { top: 65.4%; }
+        .line:nth-of-type(8) { top: 74.9%; }
+        .line:nth-of-type(9) { top: 84.5%; }
+
+        .one_title, .two_title, .three_title, .four_title, .five_title, .six_title, .seven_title, .eight_title, .nine_title {
+            font-family: 'Ma Shan Zheng', cursive;
         }
 
-        .line:nth-child(1), .circle:nth-child(2) { top: 8%; }
-        .line:nth-child(3), .circle:nth-child(4) { top: 18%; }
-        .line:nth-child(5), .circle:nth-child(6) { top: 28%; }
-        .line:nth-child(7), .circle:nth-child(8) { top: 38%; }
-        .line:nth-child(9), .circle:nth-child(10) { top: 48%; }
-        .line:nth-child(11), .circle:nth-child(12) { top: 58%; }
-        .line:nth-child(13), .circle:nth-child(14) { top: 68%; }
-        .line:nth-child(15), .circle:nth-child(16) { top: 78%; }
-        .line:nth-child(17), .circle:nth-child(18) { top: 88%; }
+        .one_info, .two_info, .three_info, .four_info, .five_info, .six_info, .seven_info, .eight_info, .nine_info {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .one_title {
+            grid-column: 3/4;
+            grid-row: 1/2;
+            margin-left: 10%;
+        }
+
+        .one_info {
+            grid-column: 4/5;
+            grid-row: 1/2;
+            margin-left: 11%;
+            margin-right: 13%;
+            border: solid black 3px;
+        }
+
+        .two_title {
+            grid-column: 2/3;
+            grid-row: 2/3;
+        }
+
+        .two_info {
+            grid-column: 1/2;
+            grid-row: 2/3;
+            margin-left: 11%;
+            margin-right: 13%;
+            border: solid black 3px;
+        }
+
+        .three_title {
+            grid-column: 3/4;
+            grid-row: 3/4;
+            margin-left: 10%;
+        }
+
+        .three_info {
+            grid-column: 4/5;
+            grid-row: 3/4;
+            margin-left: 11%;
+            margin-right: 13%;
+            border: solid black 3px;
+        }
+
+        .favorite_images {
+            grid-column: 4/5;
+            grid-row: 4/5;
+            margin-left: 10%;
+        }
+
+        .four_title {
+            grid-column: 2/3;
+            grid-row: 4/5;
+        }
+
+        .four_info {
+            grid-column: 1/2;
+            grid-row: 4/5;
+            margin-left: 11%;
+            margin-right: 13%;
+            border: solid black 3px;
+        }
+
+        .five_title {
+            grid-column: 3/4;
+            grid-row: 5/6;
+            margin-left: 10%;
+        }
+
+        .five_info {
+            grid-column: 4/5;
+            grid-row: 5/6;
+            margin-left: 11%;
+            margin-right: 13%;
+            border: solid black 3px;
+        }
+
+        .six_title {
+            grid-column: 2/3;
+            grid-row: 6/7;
+        }
+
+        .six_info {
+            grid-column: 1/2;
+            grid-row: 6/7;
+            margin-left: 11%;
+            margin-right: 13%;
+            border: solid black 3px;
+        }
+
+        .seven_title {
+            grid-column: 3/4;
+            grid-row: 7/8;
+            margin-left: 10%;
+        }
+
+        .seven_info {
+            grid-column: 4/5;
+            grid-row: 7/8;
+            margin-left: 11%;
+            margin-right: 13%;
+            border: solid black 3px;
+        }
+
+        .eight_title {
+            grid-column: 2/3;
+            grid-row: 8/9;
+        }
+
+        .eight_info {
+            grid-column: 1/2;
+            grid-row: 8/9;
+            margin-left: 11%;
+            margin-right: 13%;
+            border: solid black 3px;
+        }
+
+        .award_img {
+            grid-column: 1/2;
+            grid-row: 9/10;
+            justify-self: center;
+        }
+
+        .nine_title {
+            grid-column: 3/4;
+            grid-row: 9/10;
+            margin-left: 10%;
+        }
+
+        .nine_info {
+            grid-column: 4/5;
+            grid-row: 9/10;
+            margin-left: 11%;
+            margin-right: 13%;
+            border: solid black 3px;
+        }
+
     </style>
 
 </head>
@@ -112,15 +234,15 @@
     <main>
 
         <div class="timeline">
-            <div class="line left"></div><div class="circle left"></div>
-            <div class="line right"></div><div class="circle right"></div>
-            <div class="line left"></div><div class="circle left"></div>
-            <div class="line right"></div><div class="circle right"></div>
-            <div class="line left"></div><div class="circle left"></div>
-            <div class="line right"></div><div class="circle right"></div>
-            <div class="line left"></div><div class="circle left"></div>
-            <div class="line right"></div><div class="circle right"></div>
-            <div class="line left"></div><div class="circle left"></div>
+            <div class="line right"></div>
+            <div class="line left"></div>
+            <div class="line right"></div>
+            <div class="line left"></div>
+            <div class="line right"></div>
+            <div class="line left"></div>
+            <div class="line right"></div>
+            <div class="line left"></div>
+            <div class="line right"></div>
         </div>
 
         <p class="one_title">1978 - The Dream Begins</p>
@@ -129,9 +251,11 @@
         <p class="two_info">The family opens a humble 12-table restaurant, serving homemade noodles, stir-fries, and traditional dumplings.</p>
         <p class="three_title">1994 - Signature Dishes Introduced</p>
         <p class="three_info">Fan favorites like General Tso's Chicken, Spring Rolls, and Cream Cheese Rangoon become permanent staples</p>
-        <img class="general_tso_chicken" src="images/generalpao.jpg" alt="General Tso's Chicken">
-        <img class="spring_roll" src="images/springroll.jpg" alt="Spring Roll">
-        <img class="rangoon" src="images/ccrangoon.jpg" alt="Cream Cheese Rangoons">
+        <div class="favorite_images">
+            <img src="images/generalpao.jpg" alt="General Tso's Chicken">
+            <img src="images/springroll.jpg" alt="Spring Roll">
+            <img src="images/ccrangoon.jpg" alt="Cream Cheese Rangoons">
+        </div>
         <p class="four_title">1999 - Expansion to a Larger Dining Room</p>
         <p class="four_info">Growing demand leads to a full renovation, doubling seating capacity and updating the dining space.</p>
         <p class="five_title">2004 - Modern Wok Kitchen Installed</p>
